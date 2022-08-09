@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
 {
     a = new QApplication(argc, argv);
     w =  new MainWindow;
+    w->setWindowTitle("ARP Spoofer");
     w->show();
     return a->exec();
 }
