@@ -3,8 +3,6 @@
 
 ![alt text](https://github.com/Sx-Cheats/ARP_Spoofer/blob/main/img/Spoofer.png)
 
-Schema
-![alt text](https://github.com/Sx-Cheats/ARP_Spoofer/blob/main/img/Spoofer.png)
 
 **A schema feature is implemented to make the attack easier to understand :)**
 Schema
