@@ -3,8 +3,8 @@
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow)
 {
-    this->setWindowFlag(Qt::FramelessWindowHint); // no border (parend redefine Winproc of window)
-    this->setAttribute(Qt::WA_TranslucentBackground); // Widgets is Translucide
+    this->setWindowFlag(Qt::FramelessWindowHint);
+    this->setAttribute(Qt::WA_TranslucentBackground); 
     ui->setupUi(this);
 }
 
