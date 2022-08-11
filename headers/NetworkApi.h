@@ -293,19 +293,17 @@ class _NetworkAPI_
 {
    std::vector<NetowrkInterface> InterfaceData;
 
-   DWORD size = ((ULONG)sizeof(IP_ADAPTER_INFO))*5;
-
+   DWORD size;
+  
+   GetAdaptersInfo(NULL, &size);
    IP_ADAPTER_INFO * info = (IP_ADAPTER_INFO *)calloc(1,size);
-   
    GetAdaptersInfo(info, &size);
-
    for(;info->Next;info=info->Next)
    {
-
       InterfaceData.push_back({{info->Address},{info->IpAddressList.IpAddress.String},{info->IpAddressList.IpMask.String},{info->GatewayList.IpAddress.String},info->Index});
       strcpy(InterfaceData[InterfaceData.size()-1].AdapterName,(std::string("\\Device\\NPF_")+info->AdapterName).c_str());
       strcpy(InterfaceData[InterfaceData.size()-1].Description,(info->Description));
-   
+
    }
 
    return InterfaceData;
