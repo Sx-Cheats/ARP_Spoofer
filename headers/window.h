@@ -64,8 +64,6 @@ struct _rgb_
     }
 };
 
-typedef _rgb_ rgb_t;
-
 void Intercept(u_char *param, const struct pcap_pkthdr *header, const u_char *pkt_data);
 
 
